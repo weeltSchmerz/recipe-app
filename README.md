@@ -1,17 +1,124 @@
-# recipe_app
+# 🍽️ Recipe App (Flutter)
 
-A new Flutter project.
+A simple Flutter application that demonstrates **JSON parsing, data
+modeling, navigation, and UI rendering** by displaying a list of recipes
+and their details.
 
-## Getting Started
+------------------------------------------------------------------------
 
-This project is a starting point for a Flutter application.
+## 📱 Features
 
-A few resources to get you started if this is your first Flutter project:
+-   📄 Parse JSON data into Dart objects
+-   🧩 Clean data modeling using a `Recipe` class
+-   📋 Display recipes using `ListView.separated`
+-   🔍 Navigate to a detailed recipe screen
+-   🥗 Show ingredients in a scrollable view
+-   🎨 Simple and clean UI using Material Design
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+------------------------------------------------------------------------
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🛠️ Tech Stack
+
+-   Flutter
+-   Dart
+-   Material UI
+
+------------------------------------------------------------------------
+
+## 📂 Project Structure
+
+    lib/
+     ├── main.dart
+     ├── models/
+     │    └── recipe.dart
+     ├── data/
+     │    └── recipe_data.dart
+     ├── screens/
+     │    └── recipe_detail_screen.dart
+
+------------------------------------------------------------------------
+
+## 🚀 Getting Started
+
+### 1️⃣ Clone the repository
+
+``` bash
+git clone https://github.com/your-username/your-repo-name.git
+```
+
+### 2️⃣ Navigate to the project folder
+
+``` bash
+cd your-repo-name
+```
+
+### 3️⃣ Install dependencies
+
+``` bash
+flutter pub get
+```
+
+### 4️⃣ Run the app
+
+``` bash
+flutter run
+```
+
+------------------------------------------------------------------------
+
+## 📦 JSON Data Example
+
+``` json
+{
+  "recipes": [
+    {
+      "title": "Pasta Carbonara",
+      "description": "Creamy pasta dish with bacon and cheese.",
+      "ingredients": ["spaghetti", "bacon", "egg", "cheese"]
+    }
+  ]
+}
+```
+
+------------------------------------------------------------------------
+
+## 📸 Screenshots
+
+
+
+-   Recipe List Screen![Recipe List Screen](Screenshot_1776443137.png)
+-   Recipe Detail Screen![Recipe Detail Screen](Screenshot_1776443148.png)
+
+------------------------------------------------------------------------
+
+## 🎯 Learning Objectives
+
+This project demonstrates:
+
+-   JSON parsing using `dart:convert`
+-   Creating model classes in Flutter
+-   Using `ListView.separated`
+-   Navigation with `Navigator.push()`
+-   Building responsive UI layouts
+
+------------------------------------------------------------------------
+
+## 💡 Future Improvements
+
+-   🔍 Add search functionality
+-   ❤️ Add favorite recipes feature
+-   🌐 Fetch data from an API instead of static JSON
+-   🖼️ Add images for recipes
+
+------------------------------------------------------------------------
+
+## 👨‍💻 Author
+
+**Hasan Al Banna**\
+GitHub: https://github.com/weeltSchmerz
+
+------------------------------------------------------------------------
+
+## 📄 License
+
+This project is for educational purposes only.

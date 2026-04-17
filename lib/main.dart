@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'models/recipe.dart';
 import 'data/recipe_data.dart';
+import 'screens/recipe_detail_screen.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -28,21 +30,29 @@ class RecipeListScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Recipes'),
       ),
-      body: ListView.builder(
+      body: ListView.separated(
         itemCount: recipes.length,
+        separatorBuilder: (context, index) => const Divider(),
         itemBuilder: (context, index) {
           final recipe = recipes[index];
 
-          return Card(
-            margin: const EdgeInsets.all(10),
-            child: ListTile(
-              title: Text(recipe.title),
-              subtitle: Text(recipe.description),
-              leading: const Icon(Icons.restaurant_menu),
-            ),
+          return ListTile(
+            leading: const Icon(Icons.restaurant_menu),
+            title: Text(recipe.title),
+            subtitle: Text(recipe.description),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) =>
+                      RecipeDetailScreen(recipe: recipe),
+                ),
+              );
+            },
           );
         },
       ),
     );
   }
 }
+
